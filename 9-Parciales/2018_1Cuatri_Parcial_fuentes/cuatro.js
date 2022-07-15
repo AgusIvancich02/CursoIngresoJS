@@ -14,27 +14,31 @@ numerouno = prompt("Ingrese el primer numero");
 
 numerodos = prompt("Ingrese el segundo numero");
 
-numerouno = parseInt(numerouno);
-
-numerodos = parseInt(numerodos);
-
 if(numerouno == numerodos)
 {
-    alert("" + numerouno + numerodos);
+    alert(numerouno + numerodos);
 }
 else
 {
+    numerouno = parseInt(numerouno);
+
+    numerodos = parseInt(numerodos);
+
     if(numerouno > numerodos)
     {
-        resta = numerouno - numerodos;
+        resultado = numerouno - numerodos;
     }
     else
     {
-        suma = numerouno + numerodos;
+        resultado = numerouno + numerodos;
     }
-    if(suma > 10)
-    {
-        alert("La suma es " + suma + " y supero el 10");
-    }
+        if(resultado > 10)
+        {
+            alert("La suma es " + resultado + " y supero el 10");
+        }
+        
+        alert(resultado);
+        
 }
+
 }

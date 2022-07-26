@@ -29,13 +29,19 @@ function mostrar()
 
 	let mensaje;
 
+	let promediopositivos;
+	
+	let promedionegativos;
+
+	let diferencia;
+
 	positivos = 0;
 
 	negativos = 0;
 
 	ceros = 0;
 
-	pares = numeroIngresado/2 
+	pares = 0;
 
 	respuesta="si";
 
@@ -67,9 +73,41 @@ function mostrar()
 				console.log("la cantidad de ceros es :" + ceros);
 			}
 		}
-
+		if(numeroIngresado %2 == 0)
+		{
+			pares ++;
+			console.log("la cantidad de pares es :" + pares);
+		}
 		respuesta=prompt("desea continuar?");
 	}//fin del while
 
-	document.write(mensaje);
+	promediopositivos = acumuladorPositivos / positivos;
+
+	promedionegativos = acumuladorNegativos / negativos;
+
+	console.log("Promedio de positivos es : " + promediopositivos);
+
+	console.log("Promedio de negativos es :" + promedionegativos);
+
+	diferencia = acumuladorPositivos - acumuladorNegativos;
+
+	console.log("La diferencia entre positivos y negativos es :" + diferencia);
+
+	document.write("la suma de negativos es :" + acumuladorNegativos + "<br>");
+
+	document.write("la suma de positivos es :" + acumuladorPositivos + "<br>");
+
+	document.write("la cantidad de positivos es :" + positivos + "<br>");
+
+	document.write("la cantidad de negativos es :" + negativos + "<br>");
+
+	document.write("la cantidad de ceros es :" + ceros + "<br>");
+
+	document.write("la cantidad de pares es :" + pares + "<br>");
+
+	document.write("Promedio de positivos es : " + promediopositivos + "<br>");
+
+	document.write("Promedio de negativos es :" + promedionegativos + "<br>");
+
+	document.write("La diferencia entre positivos y negativos es :" + diferencia + "<br>");
 }//FIN DE LA FUNCIÓN
